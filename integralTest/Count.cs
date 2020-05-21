@@ -22,14 +22,19 @@ namespace integralTest
 			{
 				throw new ArgumentException();
 			}
+
 			double hh = h;
 			double N = (b - a) / h;
 			double x = a;
 			double s = 0;
             double k = 0.5;
+
 			a += h * k;
+
 			for (int i = 0; i < N-1; i++)
 			{
+				token.ThrowIfCancellationRequested();
+
 				x = a + h * i;
 				s += func(x);
 
@@ -50,7 +55,7 @@ namespace integralTest
 				double[] buf = new double[n];
 				//double[] x = new double[n];
 
-				Parallel.For(1, n, i =>
+				Parallel.For(1, n, new ParallelOptions() { CancellationToken = token }, i =>
 				{
 					//x[i] = a + i * h;
 					buf[i] = func(a + i * h);
@@ -88,6 +93,8 @@ namespace integralTest
 
 			while (n < N - 1)
 			{
+				token.ThrowIfCancellationRequested();
+
 				x = x + hh;
 				if (n % 2 == 0) I = I + 4 * func(x);
 				else I = I + 2 * func(x);
@@ -97,7 +104,7 @@ namespace integralTest
 					progress.Report(n * 100 / (int)N);
 			}
 
-			return S=I * (hh / 3);
+			return S = I * (hh / 3);
 
 		}
 		public double ParSimpson(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
@@ -112,7 +119,7 @@ namespace integralTest
 				double[] buf = new double[N];
 				double[] x = new double[N];
 
-				Parallel.For(0, N, i =>
+				Parallel.For(0, N, new ParallelOptions() { CancellationToken = token }, i =>
 				{
 					x[i] = a + i * h;
 
