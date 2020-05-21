@@ -48,12 +48,12 @@ namespace integralTest
 			cts3 = new CancellationTokenSource();
 			cts4 = new CancellationTokenSource();
 
-			Progress<int> progress1 = new Progress<int>();
+			Progress<int> progress1 = new Progress<int>();//обьявление progress bar
 			Progress<int> progress2 = new Progress<int>();
 			Progress<int> progress3 = new Progress<int>();
 			Progress<int> progress4 = new Progress<int>();
 
-			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
+			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };//устанавливает значение progress bar
 			progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
 			progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
 			progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
@@ -292,7 +292,6 @@ namespace integralTest
 		private void btnCancelled_Click(object sender, EventArgs e)
 		{
 			picture.Visible = true;
-			text_msg.Text = "Если ты не голубой нарисуй вагон другой";
 
 			if ((cts1 != null) && (cts2 != null) && (cts3 != null) && (cts4 != null))
 			{
