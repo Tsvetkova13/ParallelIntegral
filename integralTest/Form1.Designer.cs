@@ -50,6 +50,10 @@
             this.ResRecP = new System.Windows.Forms.TextBox();
             this.StimeP = new System.Windows.Forms.TextBox();
             this.RtimeP = new System.Windows.Forms.TextBox();
+            this.pgb1 = new System.Windows.Forms.ProgressBar();
+            this.pgb2 = new System.Windows.Forms.ProgressBar();
+            this.pgb3 = new System.Windows.Forms.ProgressBar();
+            this.pgb4 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // textBoxA
@@ -302,12 +306,44 @@
             this.RtimeP.Size = new System.Drawing.Size(127, 20);
             this.RtimeP.TabIndex = 24;
             // 
+            // pgb1
+            // 
+            this.pgb1.Location = new System.Drawing.Point(405, 262);
+            this.pgb1.Name = "pgb1";
+            this.pgb1.Size = new System.Drawing.Size(132, 23);
+            this.pgb1.TabIndex = 25;
+            // 
+            // pgb2
+            // 
+            this.pgb2.Location = new System.Drawing.Point(560, 262);
+            this.pgb2.Name = "pgb2";
+            this.pgb2.Size = new System.Drawing.Size(130, 23);
+            this.pgb2.TabIndex = 26;
+            // 
+            // pgb3
+            // 
+            this.pgb3.Location = new System.Drawing.Point(731, 262);
+            this.pgb3.Name = "pgb3";
+            this.pgb3.Size = new System.Drawing.Size(132, 23);
+            this.pgb3.TabIndex = 27;
+            // 
+            // pgb4
+            // 
+            this.pgb4.Location = new System.Drawing.Point(888, 262);
+            this.pgb4.Name = "pgb4";
+            this.pgb4.Size = new System.Drawing.Size(127, 23);
+            this.pgb4.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1028, 323);
+            this.ClientSize = new System.Drawing.Size(1169, 490);
+            this.Controls.Add(this.pgb4);
+            this.Controls.Add(this.pgb3);
+            this.Controls.Add(this.pgb2);
+            this.Controls.Add(this.pgb1);
             this.Controls.Add(this.RtimeP);
             this.Controls.Add(this.StimeP);
             this.Controls.Add(this.ResRecP);
@@ -361,6 +397,10 @@
 		private System.Windows.Forms.TextBox ResRecP;
 		private System.Windows.Forms.TextBox StimeP;
 		private System.Windows.Forms.TextBox RtimeP;
-	}
+        private System.Windows.Forms.ProgressBar pgb1;
+        private System.Windows.Forms.ProgressBar pgb2;
+        private System.Windows.Forms.ProgressBar pgb3;
+        private System.Windows.Forms.ProgressBar pgb4;
+    }
 }
 

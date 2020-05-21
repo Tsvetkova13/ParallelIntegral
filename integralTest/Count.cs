@@ -32,6 +32,9 @@ namespace integralTest
 			{
 				x = a + h * i;
 				s += func(x);
+
+				if (i % 1500 == 0)
+					progress.Report(i * 100 / (int)N);
 			}
 
 			return s * hh;
@@ -39,6 +42,7 @@ namespace integralTest
 		public double ParRect(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
 		{
 			double S = 0.0;
+			int count = 0;
 
 			if (h != 0.0)
 			{
@@ -50,6 +54,11 @@ namespace integralTest
 				{
 					//x[i] = a + i * h;
 					buf[i] = func(a + i * h);
+
+					Interlocked.Increment(ref count);
+					if (n % 1500 == 0)
+						progress.Report(count * 100 / n);
+
 				});
 
 				S = h * (buf.AsParallel().Sum(X => X));
@@ -83,6 +92,9 @@ namespace integralTest
 				if (n % 2 == 0) I = I + 4 * func(x);
 				else I = I + 2 * func(x);
 				n++;
+
+				if (n % 1500 == 0)
+					progress.Report(n * 100 / (int)N);
 			}
 
 			return S=I * (hh / 3);
@@ -91,6 +103,7 @@ namespace integralTest
 		public double ParSimpson(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
 		{
 			double S = 0.0;
+			int count = 0;
 
 			if (h != 0.0)
 			{
@@ -105,6 +118,10 @@ namespace integralTest
 
 					if (i % 2 == 0) { buf[i] = 4.0 * func(x[i]);}
 					else { buf[i] = 2.0 * func(x[i]); }
+
+					Interlocked.Increment(ref count);
+					if (count % 1500 == 0)
+						progress.Report(count * 100 / N);
 				});
 
 				S = h / 3.0 * (func(a) + func(b) + buf.AsParallel().Sum(X => X));
