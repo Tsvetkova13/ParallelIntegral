@@ -39,11 +39,6 @@ namespace integralTest
 			Progress<int> progress3 = new Progress<int>();
 			Progress<int> progress4 = new Progress<int>();
 
-			//progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
-			//progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
-			//progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
-			//progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
-
 			var res = 0.0;
 			bool output = true;
 
@@ -199,6 +194,19 @@ namespace integralTest
 			return res;
 		}
 
+		private void btnCancelled_Click(object sender, EventArgs e)
+		{
+			picture.Visible = true;
+
+			if ((cts1 != null) && (cts2 != null) && (cts3 != null) && (cts4 != null))
+			{
+				cts1.Cancel();
+				cts2.Cancel();
+				cts3.Cancel();
+				cts4.Cancel();
+			}
+		}
+
 		private double Simpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
 		{
 			double res = 0.0;
@@ -262,16 +270,22 @@ namespace integralTest
 
 		private void textBoxA_TextChanged(object sender, EventArgs e)
 		{
+			picture.Visible = false;
+
 			AsyncMethod();
 		}
 
 		private void textBoxB_TextChanged(object sender, EventArgs e)
 		{
+			picture.Visible = false;
+
 			AsyncMethod();
 		}
 
 		private void textBoxH_TextChanged(object sender, EventArgs e)
 		{
+			picture.Visible = false;
+
 			AsyncMethod();
 		}
 

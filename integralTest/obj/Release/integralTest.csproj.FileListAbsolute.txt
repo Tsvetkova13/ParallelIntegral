@@ -1,0 +1,10 @@
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Release\integralTest.exe.config
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Release\integralTest.exe
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Release\integralTest.pdb
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.csprojAssemblyReference.cache
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.Form1.resources
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.Properties.Resources.resources
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.csproj.GenerateResource.cache
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.csproj.CoreCompileInputs.cache
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.exe
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Release\integralTest.pdb
