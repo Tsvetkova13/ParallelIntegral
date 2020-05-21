@@ -41,7 +41,6 @@ namespace integralTest
 
 			return s * hh;
 		}
-
 		public double ParRect(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
 		{
 			double S = 0.0;
