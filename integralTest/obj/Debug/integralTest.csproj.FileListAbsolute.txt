@@ -1,0 +1,40 @@
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\bin\Debug\integralTest.exe.config
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\bin\Debug\integralTest.exe
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\bin\Debug\integralTest.pdb
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.csprojAssemblyReference.cache
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.Form1.resources
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.Properties.Resources.resources
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.csproj.GenerateResource.cache
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.csproj.CoreCompileInputs.cache
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.exe
+D:\уч.материалы\6 семестр\архитех\integralTest\integralTest\obj\Debug\integralTest.pdb
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csprojAssemblyReference.cache
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.Form1.resources
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.Properties.Resources.resources
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.GenerateResource.cache
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.CoreCompileInputs.cache
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.exe
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.pdb
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.exe.config
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.exe
+D:\UNIVER\m\laby\lab1\VSYAKI\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.pdb
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.exe.config
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.exe
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.pdb
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csprojAssemblyReference.cache
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.Form1.resources
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.Properties.Resources.resources
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.GenerateResource.cache
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.CoreCompileInputs.cache
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.exe
+D:\UNIVER\m\laby\lab1\VSYAKI2\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.pdb
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.exe.config
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.exe
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\bin\Debug\integralTest.pdb
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csprojAssemblyReference.cache
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.Form1.resources
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.Properties.Resources.resources
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.GenerateResource.cache
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.CoreCompileInputs.cache
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.exe
+D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.pdb
