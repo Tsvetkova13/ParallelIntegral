@@ -51,9 +51,16 @@
             this.ResRecP = new System.Windows.Forms.TextBox();
             this.StimeP = new System.Windows.Forms.TextBox();
             this.RtimeP = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
+            this.pgb1 = new System.Windows.Forms.ProgressBar();
+            this.pgb2 = new System.Windows.Forms.ProgressBar();
+            this.pgb3 = new System.Windows.Forms.ProgressBar();
+            this.pgb4 = new System.Windows.Forms.ProgressBar();
+=======
             this.btnCancelled = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+>>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
             this.SuspendLayout();
             // 
             // textBoxA
@@ -306,6 +313,35 @@
             this.RtimeP.Size = new System.Drawing.Size(127, 20);
             this.RtimeP.TabIndex = 24;
             // 
+<<<<<<< HEAD
+            // pgb1
+            // 
+            this.pgb1.Location = new System.Drawing.Point(405, 262);
+            this.pgb1.Name = "pgb1";
+            this.pgb1.Size = new System.Drawing.Size(132, 23);
+            this.pgb1.TabIndex = 25;
+            // 
+            // pgb2
+            // 
+            this.pgb2.Location = new System.Drawing.Point(560, 262);
+            this.pgb2.Name = "pgb2";
+            this.pgb2.Size = new System.Drawing.Size(130, 23);
+            this.pgb2.TabIndex = 26;
+            // 
+            // pgb3
+            // 
+            this.pgb3.Location = new System.Drawing.Point(731, 262);
+            this.pgb3.Name = "pgb3";
+            this.pgb3.Size = new System.Drawing.Size(132, 23);
+            this.pgb3.TabIndex = 27;
+            // 
+            // pgb4
+            // 
+            this.pgb4.Location = new System.Drawing.Point(888, 262);
+            this.pgb4.Name = "pgb4";
+            this.pgb4.Size = new System.Drawing.Size(127, 23);
+            this.pgb4.TabIndex = 28;
+=======
             // btnCancelled
             // 
             this.btnCancelled.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -327,15 +363,24 @@
             this.picture.TabIndex = 26;
             this.picture.TabStop = false;
             this.picture.Visible = false;
+>>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(1169, 490);
+            this.Controls.Add(this.pgb4);
+            this.Controls.Add(this.pgb3);
+            this.Controls.Add(this.pgb2);
+            this.Controls.Add(this.pgb1);
+=======
             this.ClientSize = new System.Drawing.Size(1028, 564);
             this.Controls.Add(this.picture);
             this.Controls.Add(this.btnCancelled);
+>>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
             this.Controls.Add(this.RtimeP);
             this.Controls.Add(this.StimeP);
             this.Controls.Add(this.ResRecP);
@@ -390,8 +435,15 @@
 		private System.Windows.Forms.TextBox ResRecP;
 		private System.Windows.Forms.TextBox StimeP;
 		private System.Windows.Forms.TextBox RtimeP;
+<<<<<<< HEAD
+        private System.Windows.Forms.ProgressBar pgb1;
+        private System.Windows.Forms.ProgressBar pgb2;
+        private System.Windows.Forms.ProgressBar pgb3;
+        private System.Windows.Forms.ProgressBar pgb4;
+=======
         private System.Windows.Forms.Button btnCancelled;
         private System.Windows.Forms.PictureBox picture;
+>>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
     }
 }
 

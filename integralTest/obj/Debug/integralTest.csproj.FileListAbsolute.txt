@@ -48,3 +48,12 @@ C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\
 C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Debug\integralTest.exe.config
 C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Debug\integralTest.exe
 C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Debug\integralTest.pdb
+D:\sun\ParallelIntegral\integralTest\bin\Debug\integralTest.exe.config
+D:\sun\ParallelIntegral\integralTest\bin\Debug\integralTest.exe
+D:\sun\ParallelIntegral\integralTest\bin\Debug\integralTest.pdb
+D:\sun\ParallelIntegral\integralTest\obj\Debug\integralTest.csprojAssemblyReference.cache
+D:\sun\ParallelIntegral\integralTest\obj\Debug\integralTest.Form1.resources
+D:\sun\ParallelIntegral\integralTest\obj\Debug\integralTest.Properties.Resources.resources
+D:\sun\ParallelIntegral\integralTest\obj\Debug\integralTest.csproj.GenerateResource.cache
+D:\sun\ParallelIntegral\integralTest\obj\Debug\integralTest.exe
+D:\sun\ParallelIntegral\integralTest\obj\Debug\integralTest.pdb
