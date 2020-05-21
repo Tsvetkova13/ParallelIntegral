@@ -39,13 +39,13 @@ namespace integralTest
 			cts3 = new CancellationTokenSource();
 			cts4 = new CancellationTokenSource();
 
-			Progress<int> progress1 = new Progress<int>();
+			Progress<int> progress1 = new Progress<int>();//обьявление progress bar
 			Progress<int> progress2 = new Progress<int>();
 			Progress<int> progress3 = new Progress<int>();
 			Progress<int> progress4 = new Progress<int>();
 
 
-			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
+			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };//устанавливает значение progress bar
 			progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
 			progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
 			progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
@@ -56,7 +56,7 @@ namespace integralTest
 
 			try
 			{
-				res = await Task<double>.Factory.StartNew(() => Rectangles(cts1.Token, progress1, time1));
+				res = await Task<double>.Factory.StartNew(() => Rectangles(cts1.Token, progress1, time1));//передаем progress1 и другие штуки
 			}
 			catch (OperationCanceledException)
 			{
@@ -206,10 +206,10 @@ namespace integralTest
 			return res;
 		}
 
-		private void btnCancelled_Click(object sender, EventArgs e)
+		private void btnCancelled_Click(object sender, EventArgs e)//отмена по кнопке
 		{
 			picture.Visible = true;
-			text_msg.Text = "Если ты не голубой нарисуй вагон другой";
+			
 
 			if ((cts1 != null) && (cts2 != null) && (cts3 != null) && (cts4 != null))
 			{

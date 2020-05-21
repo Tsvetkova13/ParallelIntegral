@@ -57,7 +57,6 @@
             this.pgb4 = new System.Windows.Forms.ProgressBar();
             this.btnCancelled = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
-            this.text_msg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -362,23 +361,12 @@
             this.picture.TabStop = false;
             this.picture.Visible = false;
             // 
-            // text_msg
-            // 
-            this.text_msg.AutoSize = true;
-            this.text_msg.Font = new System.Drawing.Font("Manglo", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_msg.ForeColor = System.Drawing.Color.Maroon;
-            this.text_msg.Location = new System.Drawing.Point(41, 361);
-            this.text_msg.Name = "text_msg";
-            this.text_msg.Size = new System.Drawing.Size(0, 28);
-            this.text_msg.TabIndex = 29;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1028, 612);
-            this.Controls.Add(this.text_msg);
             this.Controls.Add(this.pgb4);
             this.Controls.Add(this.pgb3);
             this.Controls.Add(this.pgb2);
@@ -447,7 +435,6 @@
 
         private System.Windows.Forms.Button btnCancelled;
         private System.Windows.Forms.PictureBox picture;
-        private System.Windows.Forms.Label text_msg;
     }
 }
 
