@@ -51,16 +51,14 @@
             this.ResRecP = new System.Windows.Forms.TextBox();
             this.StimeP = new System.Windows.Forms.TextBox();
             this.RtimeP = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
             this.pgb1 = new System.Windows.Forms.ProgressBar();
             this.pgb2 = new System.Windows.Forms.ProgressBar();
             this.pgb3 = new System.Windows.Forms.ProgressBar();
             this.pgb4 = new System.Windows.Forms.ProgressBar();
-=======
             this.btnCancelled = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
+            this.text_msg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
->>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
             this.SuspendLayout();
             // 
             // textBoxA
@@ -313,7 +311,6 @@
             this.RtimeP.Size = new System.Drawing.Size(127, 20);
             this.RtimeP.TabIndex = 24;
             // 
-<<<<<<< HEAD
             // pgb1
             // 
             this.pgb1.Location = new System.Drawing.Point(405, 262);
@@ -337,11 +334,12 @@
             // 
             // pgb4
             // 
+            this.pgb4.BackColor = System.Drawing.Color.Aqua;
             this.pgb4.Location = new System.Drawing.Point(888, 262);
             this.pgb4.Name = "pgb4";
             this.pgb4.Size = new System.Drawing.Size(127, 23);
             this.pgb4.TabIndex = 28;
-=======
+            // 
             // btnCancelled
             // 
             this.btnCancelled.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -357,30 +355,36 @@
             // 
             this.picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picture.BackgroundImage")));
             this.picture.Image = global::integralTest.Properties.Resources._7BqP;
-            this.picture.Location = new System.Drawing.Point(284, 261);
+            this.picture.Location = new System.Drawing.Point(503, 314);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(487, 277);
             this.picture.TabIndex = 26;
             this.picture.TabStop = false;
             this.picture.Visible = false;
->>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
+            // 
+            // text_msg
+            // 
+            this.text_msg.AutoSize = true;
+            this.text_msg.Font = new System.Drawing.Font("Manglo", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.text_msg.ForeColor = System.Drawing.Color.Maroon;
+            this.text_msg.Location = new System.Drawing.Point(41, 361);
+            this.text_msg.Name = "text_msg";
+            this.text_msg.Size = new System.Drawing.Size(0, 28);
+            this.text_msg.TabIndex = 29;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1169, 490);
+            this.BackColor = System.Drawing.Color.Aqua;
+            this.ClientSize = new System.Drawing.Size(1028, 612);
+            this.Controls.Add(this.text_msg);
             this.Controls.Add(this.pgb4);
             this.Controls.Add(this.pgb3);
             this.Controls.Add(this.pgb2);
             this.Controls.Add(this.pgb1);
-=======
-            this.ClientSize = new System.Drawing.Size(1028, 564);
             this.Controls.Add(this.picture);
             this.Controls.Add(this.btnCancelled);
->>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
             this.Controls.Add(this.RtimeP);
             this.Controls.Add(this.StimeP);
             this.Controls.Add(this.ResRecP);
@@ -435,15 +439,15 @@
 		private System.Windows.Forms.TextBox ResRecP;
 		private System.Windows.Forms.TextBox StimeP;
 		private System.Windows.Forms.TextBox RtimeP;
-<<<<<<< HEAD
+
         private System.Windows.Forms.ProgressBar pgb1;
         private System.Windows.Forms.ProgressBar pgb2;
         private System.Windows.Forms.ProgressBar pgb3;
         private System.Windows.Forms.ProgressBar pgb4;
-=======
+
         private System.Windows.Forms.Button btnCancelled;
         private System.Windows.Forms.PictureBox picture;
->>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
+        private System.Windows.Forms.Label text_msg;
     }
 }
 

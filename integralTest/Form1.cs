@@ -22,8 +22,13 @@ namespace integralTest
 			InitializeComponent();
 		}
 
+		
+			
+
 		async void AsyncMethod()
 		{
+			
+
 			time1 = new Stopwatch();
 			time2 = new Stopwatch();
 			time3 = new Stopwatch();
@@ -39,14 +44,13 @@ namespace integralTest
 			Progress<int> progress3 = new Progress<int>();
 			Progress<int> progress4 = new Progress<int>();
 
-<<<<<<< HEAD
+
 			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
 			progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
 			progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
 			progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
 
-=======
->>>>>>> 8b1566062e2b522f35b7737f28e56ecf657ba59a
+
 			var res = 0.0;
 			bool output = true;
 
@@ -205,6 +209,7 @@ namespace integralTest
 		private void btnCancelled_Click(object sender, EventArgs e)
 		{
 			picture.Visible = true;
+			text_msg.Text = "Если ты не голубой нарисуй вагон другой";
 
 			if ((cts1 != null) && (cts2 != null) && (cts3 != null) && (cts4 != null))
 			{

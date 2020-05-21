@@ -38,7 +38,7 @@ namespace integralTest
 				x = a + h * i;
 				s += func(x);
 
-				if (i % 1500 == 0)
+				if (i % 2000 == 0)
 					progress.Report(i * 100 / (int)N);
 			}
 
@@ -61,7 +61,7 @@ namespace integralTest
 					buf[i] = func(a + i * h);
 
 					Interlocked.Increment(ref count);
-					if (n % 1500 == 0)
+					if (n % 2000 == 0)
 						progress.Report(count * 100 / n);
 
 				});
@@ -100,7 +100,7 @@ namespace integralTest
 				else I = I + 2 * func(x);
 				n++;
 
-				if (n % 1500 == 0)
+				if (n % 2000 == 0)
 					progress.Report(n * 100 / (int)N);
 			}
 
@@ -127,7 +127,7 @@ namespace integralTest
 					else { buf[i] = 2.0 * func(x[i]); }
 
 					Interlocked.Increment(ref count);
-					if (count % 1500 == 0)
+					if (count % 2000 == 0)
 						progress.Report(count * 100 / N);
 				});
 
