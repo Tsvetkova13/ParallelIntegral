@@ -123,7 +123,7 @@
             this.ResRecS.BackColor = System.Drawing.Color.Black;
             this.ResRecS.ForeColor = System.Drawing.Color.White;
             this.ResRecS.Location = new System.Drawing.Point(563, 135);
-            this.ResRecS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResRecS.Margin = new System.Windows.Forms.Padding(2);
             this.ResRecS.Name = "ResRecS";
             this.ResRecS.Size = new System.Drawing.Size(127, 20);
             this.ResRecS.TabIndex = 9;
@@ -134,7 +134,7 @@
             this.ResSimS.BackColor = System.Drawing.Color.Black;
             this.ResSimS.ForeColor = System.Drawing.Color.White;
             this.ResSimS.Location = new System.Drawing.Point(405, 135);
-            this.ResSimS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResSimS.Margin = new System.Windows.Forms.Padding(2);
             this.ResSimS.Name = "ResSimS";
             this.ResSimS.Size = new System.Drawing.Size(132, 20);
             this.ResSimS.TabIndex = 10;
@@ -197,7 +197,7 @@
             this.StimeS.BackColor = System.Drawing.Color.Black;
             this.StimeS.ForeColor = System.Drawing.Color.White;
             this.StimeS.Location = new System.Drawing.Point(405, 219);
-            this.StimeS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StimeS.Margin = new System.Windows.Forms.Padding(2);
             this.StimeS.Name = "StimeS";
             this.StimeS.Size = new System.Drawing.Size(132, 20);
             this.StimeS.TabIndex = 15;
@@ -208,7 +208,7 @@
             this.RtimeS.BackColor = System.Drawing.Color.Black;
             this.RtimeS.ForeColor = System.Drawing.Color.White;
             this.RtimeS.Location = new System.Drawing.Point(560, 219);
-            this.RtimeS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RtimeS.Margin = new System.Windows.Forms.Padding(2);
             this.RtimeS.Name = "RtimeS";
             this.RtimeS.Size = new System.Drawing.Size(127, 20);
             this.RtimeS.TabIndex = 16;
@@ -270,7 +270,7 @@
             this.ResSimP.BackColor = System.Drawing.Color.Black;
             this.ResSimP.ForeColor = System.Drawing.Color.White;
             this.ResSimP.Location = new System.Drawing.Point(724, 135);
-            this.ResSimP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResSimP.Margin = new System.Windows.Forms.Padding(2);
             this.ResSimP.Name = "ResSimP";
             this.ResSimP.Size = new System.Drawing.Size(132, 20);
             this.ResSimP.TabIndex = 21;
@@ -281,7 +281,7 @@
             this.ResRecP.BackColor = System.Drawing.Color.Black;
             this.ResRecP.ForeColor = System.Drawing.Color.White;
             this.ResRecP.Location = new System.Drawing.Point(888, 135);
-            this.ResRecP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResRecP.Margin = new System.Windows.Forms.Padding(2);
             this.ResRecP.Name = "ResRecP";
             this.ResRecP.Size = new System.Drawing.Size(127, 20);
             this.ResRecP.TabIndex = 22;
@@ -292,7 +292,7 @@
             this.StimeP.BackColor = System.Drawing.Color.Black;
             this.StimeP.ForeColor = System.Drawing.Color.White;
             this.StimeP.Location = new System.Drawing.Point(731, 219);
-            this.StimeP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StimeP.Margin = new System.Windows.Forms.Padding(2);
             this.StimeP.Name = "StimeP";
             this.StimeP.Size = new System.Drawing.Size(132, 20);
             this.StimeP.TabIndex = 23;
@@ -302,7 +302,7 @@
             this.RtimeP.BackColor = System.Drawing.Color.Black;
             this.RtimeP.ForeColor = System.Drawing.Color.White;
             this.RtimeP.Location = new System.Drawing.Point(888, 219);
-            this.RtimeP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RtimeP.Margin = new System.Windows.Forms.Padding(2);
             this.RtimeP.Name = "RtimeP";
             this.RtimeP.Size = new System.Drawing.Size(127, 20);
             this.RtimeP.TabIndex = 24;
@@ -337,6 +337,7 @@
             this.Controls.Add(this.textBoxA);
             this.Name = "Form1";
             this.Text = "Tsvetkova, Shepeleva 3-46";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

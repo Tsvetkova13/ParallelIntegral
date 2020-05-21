@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,12 +13,62 @@ namespace integralTest
 {
 	public partial class Form1 : Form
 	{
+		private CancellationTokenSource cts1, cts2, cts3, cts4;
+		private Stopwatch time1, time2, time3, time4;
+
 		public Form1()
 		{
 			InitializeComponent();
 		}
 
-		private void Rectangles()
+		async void AsyncMethod()
+		{
+			time1 = new Stopwatch();
+			time2 = new Stopwatch();
+			time3 = new Stopwatch();
+			time4 = new Stopwatch();
+
+			cts1 = new CancellationTokenSource();
+			cts2 = new CancellationTokenSource();
+			cts3 = new CancellationTokenSource();
+			cts4 = new CancellationTokenSource();
+
+			Progress<int> progress1 = new Progress<int>();
+			Progress<int> progress2 = new Progress<int>();
+			Progress<int> progress3 = new Progress<int>();
+			Progress<int> progress4 = new Progress<int>();
+
+			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
+			progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
+			progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
+			progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
+
+			var res = 0.0;
+			bool output = true;
+
+			try
+			{
+				res = await Task<double>.Factory.StartNew(() => Rectangles(cts1.Token, progress1, time1));
+			}
+			catch (OperationCanceledException)
+			{
+				Trap_out.Text = "Отмена";
+				output = false;
+			}
+			catch
+			{
+				Trap_out.Text = "Ошибка";
+				output = false;
+			}
+
+			if (output)
+			{
+				Trap_out.Text = Convert.ToString(res);
+				eTrap.Text = Convert.ToString(time1.Elapsed);
+			}
+		}
+
+		private void Rectangles(CancellationToken token, IProgress<int> progress, Stopwatch time)
 		{
 			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
 			{
@@ -44,7 +95,8 @@ namespace integralTest
 				}
 			}
 		}
-		private void ParRect()
+		
+		private void ParRect(CancellationToken token, IProgress<int> progress, Stopwatch time)
 		{
 			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
 			{
@@ -72,7 +124,7 @@ namespace integralTest
 			}
 		}
 
-		private void Simpson()
+		private void Simpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
 		{
 			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
 			{
@@ -100,7 +152,7 @@ namespace integralTest
 			}
 		}
 
-		private void ParSimpson()
+		private void ParSimpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
 		{
 			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
 			{
@@ -176,6 +228,11 @@ namespace integralTest
 		private void ResRecP_TextChanged(object sender, EventArgs e)
 		{
 			ParRect();
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
