@@ -127,7 +127,6 @@
             this.ResRecS.Name = "ResRecS";
             this.ResRecS.Size = new System.Drawing.Size(127, 20);
             this.ResRecS.TabIndex = 9;
-            this.ResRecS.TextChanged += new System.EventHandler(this.ResRecS_TextChanged);
             // 
             // ResSimS
             // 
@@ -138,7 +137,6 @@
             this.ResSimS.Name = "ResSimS";
             this.ResSimS.Size = new System.Drawing.Size(132, 20);
             this.ResSimS.TabIndex = 10;
-            this.ResSimS.TextChanged += new System.EventHandler(this.ResSimS_TextChanged);
             // 
             // label2
             // 
@@ -201,7 +199,6 @@
             this.StimeS.Name = "StimeS";
             this.StimeS.Size = new System.Drawing.Size(132, 20);
             this.StimeS.TabIndex = 15;
-            this.StimeS.TextChanged += new System.EventHandler(this.StimeS_TextChanged);
             // 
             // RtimeS
             // 
@@ -274,7 +271,6 @@
             this.ResSimP.Name = "ResSimP";
             this.ResSimP.Size = new System.Drawing.Size(132, 20);
             this.ResSimP.TabIndex = 21;
-            this.ResSimP.TextChanged += new System.EventHandler(this.ResSimP_TextChanged);
             // 
             // ResRecP
             // 
@@ -285,7 +281,6 @@
             this.ResRecP.Name = "ResRecP";
             this.ResRecP.Size = new System.Drawing.Size(127, 20);
             this.ResRecP.TabIndex = 22;
-            this.ResRecP.TextChanged += new System.EventHandler(this.ResRecP_TextChanged);
             // 
             // StimeP
             // 

@@ -38,3 +38,13 @@ D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60
 D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.csproj.CoreCompileInputs.cache
 D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.exe
 D:\уч.материалы\6 семестр\Integral-b0f1da58a0c37e905ad9a810b60558dac8da1ae7\integralTest\obj\Debug\integralTest.pdb
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.csprojAssemblyReference.cache
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.Form1.resources
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.Properties.Resources.resources
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.csproj.GenerateResource.cache
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.csproj.CoreCompileInputs.cache
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.exe
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\obj\Debug\integralTest.pdb
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Debug\integralTest.exe.config
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Debug\integralTest.exe
+C:\Users\влад акробат\Desktop\PROG\ParallelIntegral\integralTest\bin\Debug\integralTest.pdb

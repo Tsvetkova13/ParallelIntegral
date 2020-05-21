@@ -39,10 +39,10 @@ namespace integralTest
 			Progress<int> progress3 = new Progress<int>();
 			Progress<int> progress4 = new Progress<int>();
 
-			progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
-			progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
-			progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
-			progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
+			//progress1.ProgressChanged += (sender, e) => { pgb1.Value = e; };
+			//progress2.ProgressChanged += (sender, e) => { pgb2.Value = e; };
+			//progress3.ProgressChanged += (sender, e) => { pgb3.Value = e; };
+			//progress4.ProgressChanged += (sender, e) => { pgb4.Value = e; };
 
 			var res = 0.0;
 			bool output = true;
@@ -53,19 +53,88 @@ namespace integralTest
 			}
 			catch (OperationCanceledException)
 			{
-				Trap_out.Text = "Отмена";
+				ResRecS.Text = "Отмена";
 				output = false;
 			}
 			catch
 			{
-				Trap_out.Text = "Ошибка";
+				ResRecS.Text = "Ошибка";
 				output = false;
 			}
 
 			if (output)
 			{
-				Trap_out.Text = Convert.ToString(res);
-				eTrap.Text = Convert.ToString(time1.Elapsed);
+				ResRecS.Text = Convert.ToString(res);
+				RtimeS.Text = Convert.ToString(time1.Elapsed);
+			}
+
+			output = true;
+
+			try
+			{
+				res = await Task<double>.Factory.StartNew(() => Simpson(cts2.Token, progress2, time2));
+			}
+			catch (OperationCanceledException)
+			{
+				ResSimS.Text = "Отмена";
+				output = false;
+			}
+			catch
+			{
+				ResSimS.Text = "Ошибка";
+				output = false;
+			}
+
+			if (output)
+			{
+				ResSimS.Text = Convert.ToString(res);
+				StimeS.Text = Convert.ToString(time2.Elapsed);
+			}
+
+			output = true;
+
+			try
+			{
+				res = await Task<double>.Factory.StartNew(() => ParSimpson(cts3.Token, progress3, time3));
+			}
+			catch (OperationCanceledException)
+			{
+				ResSimP.Text = "Отмена";
+				output = false;
+			}
+			catch
+			{
+				ResSimP.Text = "Ошибка";
+				output = false;
+			}
+
+			if (output)
+			{
+				ResSimP.Text = Convert.ToString(res);
+				StimeP.Text = Convert.ToString(time3.Elapsed);
+			}
+
+			output = true;
+
+			try
+			{
+				res = await Task<double>.Factory.StartNew(() => ParRect(cts4.Token, progress4, time4));
+			}
+			catch (OperationCanceledException)
+			{
+				ResRecP.Text = "Отмена";
+				output = false;
+			}
+			catch
+			{
+				ResRecP.Text = "Ошибка";
+				output = false;
+			}
+
+			if (output)
+			{
+				ResRecP.Text = Convert.ToString(res);
+				RtimeP.Text = Convert.ToString(time4.Elapsed);
 			}
 		}
 
@@ -90,7 +159,7 @@ namespace integralTest
 
 					time.Start();
 
-					res = Math.Round(p.Rectangles(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3);
+					res = Math.Round(p.Rectangles(num1, num2, num3, token, progress, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3);
 
 					time.Stop();
 				}
@@ -98,139 +167,112 @@ namespace integralTest
 
 			return res;
 		}
-		
-		//private double ParRect(CancellationToken token, IProgress<int> progress, Stopwatch time)
-		//{
-		//	if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
-		//	{
-		//		Count r = new Count();
-		//		double num1, num2, num3;
 
-		//		string a = textBoxA.Text;
-		//		string b = textBoxB.Text;
-		//		string h = textBoxH.Text;
+		private double ParRect(CancellationToken token, IProgress<int> progress, Stopwatch time)
+		{
+			double res = 0.0;
 
-		//		bool AisNum = double.TryParse(a, out num1);
-		//		bool BisNum = double.TryParse(b, out num2);
-		//		bool HisNum = double.TryParse(h, out num3);
+			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
+			{
+				Count r = new Count();
+				double num1, num2, num3;
 
-		//		if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 > 0.0) && (num1 > 0.0))
-		//		{
-		//			DateTime t1 = DateTime.Now;
+				string a = textBoxA.Text;
+				string b = textBoxB.Text;
+				string h = textBoxH.Text;
 
-		//			ResRecP.Text = Convert.ToString(Math.Round(r.Rectangles(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
+				bool AisNum = double.TryParse(a, out num1);
+				bool BisNum = double.TryParse(b, out num2);
+				bool HisNum = double.TryParse(h, out num3);
 
-		//			TimeSpan time = DateTime.Now - t1;
-		//			RtimeP.Text = Convert.ToString(time.TotalSeconds) + " сек";
+				if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 > 0.0) && (num1 > 0.0))
+				{
+					time.Start();
 
-		//		}
-		//	}
-		//}
+					res = Math.Round(r.Rectangles(num1, num2, num3, token, progress, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3);
 
-		//private double Simpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
-		//{
-		//	if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
-		//	{
-		//		Count q = new Count();
-		//		double num1, num2, num3;
+					time.Stop();
 
-		//		string a = textBoxA.Text;
-		//		string b = textBoxB.Text;
-		//		string h = textBoxH.Text;
+				}
+			}
 
-		//		bool AisNum = double.TryParse(a, out num1);
-		//		bool BisNum = double.TryParse(b, out num2);
-		//		bool HisNum = double.TryParse(h, out num3);
+			return res;
+		}
 
-		//		if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 > 0) && (num1 > 0.0))
-		//		{
-		//			DateTime t1 = DateTime.Now;
+		private double Simpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
+		{
+			double res = 0.0;
 
-		//			ResSimS.Text = Convert.ToString(Math.Round(q.Simpson(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
+			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
+			{
+				Count q = new Count();
+				double num1, num2, num3;
 
-		//			TimeSpan time = DateTime.Now - t1;
-		//			StimeS.Text = Convert.ToString(time.TotalSeconds) + " сек";
+				string a = textBoxA.Text;
+				string b = textBoxB.Text;
+				string h = textBoxH.Text;
 
-		//		}
-		//	}
-		//}
+				bool AisNum = double.TryParse(a, out num1);
+				bool BisNum = double.TryParse(b, out num2);
+				bool HisNum = double.TryParse(h, out num3);
 
-		//private double ParSimpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
-		//{
-		//	if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
-		//	{
-		//		Count s = new Count();
-		//		double num1, num2, num3;
+				if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 > 0) && (num1 > 0.0))
+				{
+					time.Start();
 
-		//		string a = textBoxA.Text;
-		//		string b = textBoxB.Text;
-		//		string h = textBoxH.Text;
+					res = Math.Round(q.Simpson(num1, num2, num3, token, progress, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3);
 
-		//		bool AisNum = double.TryParse(a, out num1);
-		//		bool BisNum = double.TryParse(b, out num2);
-		//		bool HisNum = double.TryParse(h, out num3);
+					time.Stop();
 
-		//		if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 > 0) && (num1 > 0.0))
-		//		{
-		//			DateTime t1 = DateTime.Now;
+				}
+			}
 
-		//			ResSimP.Text = Convert.ToString(Math.Round(s.Simpson(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
+			return res;
+		}
 
-		//			TimeSpan time = DateTime.Now - t1;
-		//			StimeP.Text = Convert.ToString(time.TotalSeconds) + " сек";
+		private double ParSimpson(CancellationToken token, IProgress<int> progress, Stopwatch time)
+		{
+			double res = 0.0;
 
-		//		}
-		//	}
-		//}
+			if ((textBoxA.Text != "") && (textBoxB.Text != "") && (textBoxH.Text != ""))
+			{
+				Count s = new Count();
+				double num1, num2, num3;
 
-	
+				string a = textBoxA.Text;
+				string b = textBoxB.Text;
+				string h = textBoxH.Text;
+
+				bool AisNum = double.TryParse(a, out num1);
+				bool BisNum = double.TryParse(b, out num2);
+				bool HisNum = double.TryParse(h, out num3);
+
+				if ((AisNum) && (BisNum) && (HisNum) && (num1 <= num2) && (num3 > 0) && (num1 > 0.0))
+				{
+					time.Start();
+
+					res = Math.Round(s.Simpson(num1, num2, num3, token, progress, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3);
+
+					time.Stop();
+				}
+			}
+
+			return res;
+		}
+
 		private void textBoxA_TextChanged(object sender, EventArgs e)
 		{
-			Rectangles();
-			Simpson();
-			ParRect();
-			ParSimpson();
+			AsyncMethod();
 		}
 
 		private void textBoxB_TextChanged(object sender, EventArgs e)
 		{
-			Rectangles();
-			Simpson();
-			ParRect();
-			ParSimpson();
+			AsyncMethod();
 		}
 
 		private void textBoxH_TextChanged(object sender, EventArgs e)
 		{
-			Rectangles();
-			Simpson();
-			ParRect();
-			ParSimpson();
-		}
-
-		private void ResSimS_TextChanged(object sender, EventArgs e)
-		{
-			Simpson();
-		}
-
-		private void StimeS_TextChanged(object sender, EventArgs e)
-		{
-			//
-		}
-
-		private void ResRecS_TextChanged(object sender, EventArgs e)
-		{
-			Rectangles();
-		}
-
-		private void ResSimP_TextChanged(object sender, EventArgs e)
-		{
-			ParSimpson();
-		}
-
-		private void ResRecP_TextChanged(object sender, EventArgs e)
-		{
-			ParRect();
+			AsyncMethod();
 		}
 
 		private void Form1_Load(object sender, EventArgs e)

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace integralTest
 {
-    public class Count:Iintegral
+    public class Count : Iintegral
     {
-        public double Rectangles(double a, double b, double h, Func<double, double> func)
+        public double Rectangles(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
         {
 
 			if (h < 0.0)
@@ -35,8 +36,7 @@ namespace integralTest
 
 			return s * hh;
 		}
-
-		public double ParRect(double a, double b, double h, Func<double, double> func)
+		public double ParRect(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
 		{
 			double S = 0.0;
 
@@ -57,8 +57,7 @@ namespace integralTest
 
 			return S;
 		}
-
-		public double Simpson(double a, double b, double h, Func<double, double> func)
+		public double Simpson(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
         {
 
 			if (h < 0.0)
@@ -89,7 +88,7 @@ namespace integralTest
 			return S=I * (hh / 3);
 
 		}
-		public double ParSimpson(double a, double b, double h, Func<double, double> func)
+		public double ParSimpson(double a, double b, double h, CancellationToken token, IProgress<int> progress, Func<double, double> func)
 		{
 			double S = 0.0;
 
